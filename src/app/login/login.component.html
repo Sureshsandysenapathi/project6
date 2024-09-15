@@ -1,0 +1,51 @@
+<div class="row">
+
+<div class="col-6">
+    <h1>get the records </h1>
+    
+    <table>
+        
+        <tr>
+            <th>dept id</th>
+            <th>dept name</th>
+            <th>dept logo</th>
+        </tr>
+        
+        
+        @for (item of department; track $index){
+            <tr>
+                <td>{{item.departmentId}}</td>
+                <td>{{item.departmentName}}</td>
+                <td>{{item.departmentLogo}}</td>
+            </tr>
+
+        }
+        
+    </table>
+    </div>
+    <div class="col-6">
+        <form >
+            <div class="mb-3 mt-3">
+              <label for="Name" class="form-label">department name:</label>
+              <input type="Name" class="form-control" id="name" [(ngModel)]="DeptObj.departmentName" placeholder="Enter department name" name="department">
+            </div>
+            <div class="mb-3">
+              <label for="logo" class="form-label">department logo:</label>
+              <input type="logo" class="form-control" id="logo" [(ngModel)]="DeptObj.departmentLogo" placeholder="department logo" name="logo">
+            </div>
+            <div class="form-check mb-3">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+              </label>
+            </div>
+            <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+            <button type="submit" (click)="onUpdate()" class="btn btn-danger">Update</button>
+          </form>
+           
+    </div>
+</div>
+
+
+
+
+
